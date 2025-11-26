@@ -41,7 +41,7 @@ sns.set_theme(style="darkgrid") # Make it look modern
 
 # Create the Bar Chart (Top 10 Aimers)
 top_aimers = data.sort_values(by='HSP', ascending=False).head(10)
-sns.barplot(data=top_aimers, x='Player', y='HSP', palette='magma')
+sns.barplot(data=top_aimers, x='Player', y='HSP', hue='Player', legend=False, palette='magma')
 
 # Add Labels (Make it readable)
 plt.title('Top 10 VCT Players by Headshot %', fontsize=16)
